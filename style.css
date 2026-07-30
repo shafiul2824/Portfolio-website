@@ -194,3 +194,66 @@ footer {
     text-align: center;
     padding: 20px;
 }
+/* ==========================
+   Responsive Design
+========================== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    nav ul li {
+        list-style: none;
+    }
+
+    .about-content,
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content img {
+        width: 180px;
+        margin: auto;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .social-links {
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        display: block;
+        margin: 10px auto;
+        width: 200px;
+        text-align: center;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
