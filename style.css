@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 .about,
 .skills {
     padding: 80px 10%;
@@ -89,10 +92,21 @@
 .project-card {
     background: #fff;
     padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    transition: transform .3s ease, box-shadow .3s ease;
 }
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,.2);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,0,0,.2);
+}
+
 
 .project-card:hover {
     transform: translateY(-10px);
@@ -256,4 +270,100 @@ footer {
     footer {
         font-size: 14px;
     }
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #111827;
+    padding: 15px 10%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+.btn,
+.project-links a,
+.contact-form button,
+.social-links a {
+    transition: 0.3s ease;
+}
+
+.btn:hover,
+.project-links a:hover,
+.contact-form button:hover,
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,188,212,.3);
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about,
+.skills,
+.projects,
+.contact {
+    animation: fadeUp 1s ease;
+}
+.about-content img {
+    transition: transform .4s ease;
+}
+
+.about-content img:hover {
+    transform: scale(1.05);
+}
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    transition: .3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+.about-content img {
+    transition: .4s;
+}
+
+.about-content img:hover {
+    transform: scale(1.05);
+}
+h2 {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+h2::after {
+    content: "";
+    width: 70px;
+    height: 4px;
+    background: #00bcd4;
+    display: block;
+    margin: 12px auto;
+    border-radius: 20px;
 }
