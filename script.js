@@ -57,3 +57,18 @@ topBtn.addEventListener("click", () => {
     });
 
 });
+const skillBars = document.querySelectorAll(".bar div");
+
+function animateSkills() {
+    skillBars.forEach(bar => {
+        bar.classList.add("active");
+    });
+}
+
+window.addEventListener("load", animateSkills);
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+menuToggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
